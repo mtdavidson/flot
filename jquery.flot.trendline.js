@@ -66,7 +66,7 @@ that is fired at the bottom of the for-loop in parseData function
                 x1 = parseFloat(data[ii-1][0]);
                 y1 = parseFloat(m*x1 + b);
 
-                ns = $.extend(true, {}, opts.series, { data:[[x0,y0,0],[x1,y1,0]], label: 'Trend', bars: defaultOther, lines: defaultLine, points:defaultOther, color: series[series.length-1].color } );
+                ns = $.extend(true, {}, opts.series, { data:[[x0,y0,0],[x1,y1,0]], label: 'Trend (r<sup>2</sup> =' + ( 1 - (m/b) ) + ')' , bars: defaultOther, lines: defaultLine, points:defaultOther, color: series[series.length-1].color } );
                 series.push(ns);
             }
         }
